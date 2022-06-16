@@ -1,0 +1,161 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins';
+
+
+
+header {
+    width: 100%;
+    height: 83px;
+    position: relative;
+   
+   
+}
+
+
+.header_nav {
+
+
+    display: none;
+    width: 182px;
+    height: 208px;
+    background: #F5F5F5;
+    z-index: 10;
+    position: absolute;
+    left: 33%;
+    top: 60px;
+}
+
+.active {
+    @include flexVertical;
+}
+
+.nav_icon {
+    width: 44px;
+    height: 37px;
+    position: absolute;
+    background-color: black;
+    left: 84%;
+    top: 23px;
+
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 3px;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        position: absolute;
+        left: 28%;
+        top: 13px;
+
+    }
+
+    &::after {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 28%;
+        top: 23px;
+
+
+    }
+
+    &.clicked::before {
+        border-top: none;
+        transform: translateY(1px)rotate(-43deg);
+    }
+
+    &.clicked::after {
+        transform: translateY(-6px)rotate(45deg)
+    }
+
+}
+
+.nav_link {
+    @include flex;
+    @include link;
+    width: 182px;
+    height: 32px;
+    box-sizing: border-box;
+    padding-left: 13px;
+    padding-top: 5px;
+
+    &:first-child {
+        color: rgba(87, 164, 164, 1);
+    }
+
+    &:focus {
+
+        background: rgba(229, 229, 229, 1);
+        outline: none;
+    }
+}
+
+@media (min-width:$tablet_bp) {
+
+    header {
+        @include flexCenter;
+
+        width: 100%;
+        height: 118px;
+
+    }
+
+    .header_nav {
+        position: static;
+        width: 87%;
+        height: 118px;
+        @include flex;
+        flex-direction: row;
+        background-color: #fff;
+        justify-content: space-between;
+        margin: $margin;
+
+
+    }
+
+    .nav_icon {
+        display: none;
+    }
+
+    .nav_link {
+        @include link;
+        border: transparent;
+        padding: 0;
+
+        &:nth-child(3) {
+            width: 84px;
+        }
+
+        &:hover {
+
+            color: rgba(87, 164, 164, 1)
+        }
+    }
+
+}
+
+@media all and (min-width:$desktop_bp) {
+
+    header {
+
+        width: $width;
+        height: 118px;
+        @include flexCenter;
+
+
+    }
+
+    .header_nav {
+
+        width: 87%;
+    }
+
+    .nav_icon {
+
+        display: none;
+    }
+
+}

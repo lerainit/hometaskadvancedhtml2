@@ -1,0 +1,43 @@
+{
+  "name": "hometaskadvancedhtml2",
+  "version": "1.0.0",
+  "description": "Hometask 2 advanced html/css",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lerainit/hometaskadvancedhtml2.git"
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "media"
+  ],
+  "author": "Valeriya Vitvytska FE online",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lerainit/hometaskadvancedhtml2/issues"
+  },
+  "homepage": "https://github.com/lerainit/hometaskadvancedhtml2#readme",
+  "dependencies": {
+    "chalk": "^5.0.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "browser-sync": "2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-js-minify": "^0.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.52.3"
+  }
+}

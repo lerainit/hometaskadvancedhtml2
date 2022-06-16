@@ -1,0 +1,51 @@
+@import 'variables';
+
+
+@mixin link{
+    display: block;
+    width:62px;
+    height: 22px;
+    text-decoration: none;
+    color: $font_black;
+    font-size: 11px;
+    text-transform: uppercase;
+   
+}
+@mixin container1200{
+    width:73%;
+    margin: $margin;
+}
+
+@mixin postImg{
+
+    width:160px;
+    height: 140px;
+}
+
+@mixin galleryImg1200 {
+    width: 25%;
+    height:285px;
+    margin-bottom: 50px;
+
+}
+
+@mixin flex{
+    display: flex;
+   align-items: center;
+}
+
+@mixin flexSpace{
+    display: flex;
+    justify-content: space-between;
+}
+ @mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexVertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
